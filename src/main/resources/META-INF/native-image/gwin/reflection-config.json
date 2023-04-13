@@ -1,0 +1,20 @@
+[
+  {
+    "name": "gwim.internal.MigrationsCliConsoleHandler",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "gwim.internal.MigrationsCliConsoleFormatter",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  }
+]

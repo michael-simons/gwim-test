@@ -1,6 +1,9 @@
 name: release
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   create:
     tags:
@@ -39,6 +42,13 @@ jobs:
 
       - name: 'Compile'
         run: mvn --no-transfer-progress clean package
+
+      - name: Install upx
+        run: choco install upx
+        if: ${{ runner.os == 'Windows' }}
+
+      - name: 'compress'
+        run: upx ./target/app.exe
 
       - name: 'Run'
         run: ./target/app.exe
